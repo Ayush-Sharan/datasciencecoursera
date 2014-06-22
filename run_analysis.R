@@ -53,4 +53,4 @@ tidydata <- dcast(x, ActivityID+SubjectID~variable, value.var="mean")
 
 #Print out the data to a text file
 
-tidydata1 <- write.tabe("tidydata1.txt")
+write.table(ans4, "tidydata1.txt", sep="\t")
