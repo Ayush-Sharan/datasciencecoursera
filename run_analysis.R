@@ -38,7 +38,7 @@ activity_labels <- read.table("activity_labels.txt")
 
 #Make clear descriptive activity labels, keeping sort = FALSE in the merge() command so 
 #that the merged data frame is not sorted.
-desc_activity <- merge(imd,activity_labels,by.x = "Activity",by.y = "V1",sort = FALSE all= TRUE)
+desc_activity <- merge(imd,activity_labels,by.x = "Activity",by.y = "V1",sort = FALSE, all= TRUE)
 names(desc_activity) <- c("ActivityID", "SubjectID", "Activity")
 ans4 <- cbind(ans2, desc_activity)
 
