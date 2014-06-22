@@ -50,3 +50,7 @@ miris <- melt(ans4, id.vars=c("ActivityID","SubjectID"))
 x <- ddply(miris, .(ActivityID,SubjectID, variable), summarize, mean=mean(value))
 
 tidydata <- dcast(x, ActivityID+SubjectID~variable, value.var="mean")
+
+#Print out the data to a text file
+
+tidydata1 <- write.tabe("tidydata1.txt")
